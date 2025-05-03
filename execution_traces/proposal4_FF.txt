@@ -1,0 +1,152 @@
+Execution Trace for Proposal 4 (Ford-Fulkerson)
+
+
+--- Ford-Fulkerson (BFS/Edmonds-Karp) ---
+Iteration 1 - BFS Details:
+Queue starts with: [0]
+Visiting: 0
+  Discovered vertex 1 from vertex 0
+  Discovered vertex 3 from vertex 0
+Visiting: 1
+  Discovered vertex 2 from vertex 1
+Visiting: 3
+  Discovered vertex 5 from vertex 3
+  Discovered vertex 6 from vertex 3
+Visiting: 2
+  Discovered vertex 4 from vertex 2
+Visiting: 5
+  Discovered vertex 7 from vertex 5
+Visiting: 6
+Visiting: 4
+Visiting: 7
+BFS found augmenting path: [0, 3, 5, 7]
+
+Found augmenting path: 0 -> 3 -> 5 -> 7 with flow = 5
+Updated Residual Graph:
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           5           0           4           0           0           0           0
+           a           0           0           7           0           0           0           0           0
+           b           0           0           0           0           4           3           0           0
+           c           5           0           4           0           0           1           5           0
+           d           0           0           0           0           0           6           0           6
+           e           0           0           0           5           0           0           0           0
+           f           0           0           0           0           0           0           0           7
+           t           0           0           0           0           0           5           0           0
+
+Iteration 2 - BFS Details:
+Queue starts with: [0]
+Visiting: 0
+  Discovered vertex 1 from vertex 0
+  Discovered vertex 3 from vertex 0
+Visiting: 1
+  Discovered vertex 2 from vertex 1
+Visiting: 3
+  Discovered vertex 5 from vertex 3
+  Discovered vertex 6 from vertex 3
+Visiting: 2
+  Discovered vertex 4 from vertex 2
+Visiting: 5
+Visiting: 6
+  Discovered vertex 7 from vertex 6
+Visiting: 4
+Visiting: 7
+BFS found augmenting path: [0, 3, 6, 7]
+
+Found augmenting path: 0 -> 3 -> 6 -> 7 with flow = 4
+Updated Residual Graph:
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           5           0           0           0           0           0           0
+           a           0           0           7           0           0           0           0           0
+           b           0           0           0           0           4           3           0           0
+           c           9           0           4           0           0           1           1           0
+           d           0           0           0           0           0           6           0           6
+           e           0           0           0           5           0           0           0           0
+           f           0           0           0           4           0           0           0           3
+           t           0           0           0           0           0           5           4           0
+
+Iteration 3 - BFS Details:
+Queue starts with: [0]
+Visiting: 0
+  Discovered vertex 1 from vertex 0
+Visiting: 1
+  Discovered vertex 2 from vertex 1
+Visiting: 2
+  Discovered vertex 4 from vertex 2
+  Discovered vertex 5 from vertex 2
+Visiting: 4
+  Discovered vertex 7 from vertex 4
+Visiting: 5
+  Discovered vertex 3 from vertex 5
+Visiting: 7
+BFS found augmenting path: [0, 1, 2, 4, 7]
+
+Found augmenting path: 0 -> 1 -> 2 -> 4 -> 7 with flow = 4
+Updated Residual Graph:
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           1           0           0           0           0           0           0
+           a           4           0           3           0           0           0           0           0
+           b           0           4           0           0           0           3           0           0
+           c           9           0           4           0           0           1           1           0
+           d           0           0           4           0           0           6           0           2
+           e           0           0           0           5           0           0           0           0
+           f           0           0           0           4           0           0           0           3
+           t           0           0           0           0           4           5           4           0
+
+Iteration 4 - BFS Details:
+Queue starts with: [0]
+Visiting: 0
+  Discovered vertex 1 from vertex 0
+Visiting: 1
+  Discovered vertex 2 from vertex 1
+Visiting: 2
+  Discovered vertex 5 from vertex 2
+Visiting: 5
+  Discovered vertex 3 from vertex 5
+Visiting: 3
+  Discovered vertex 6 from vertex 3
+Visiting: 6
+  Discovered vertex 7 from vertex 6
+Visiting: 7
+BFS found augmenting path: [0, 1, 2, 5, 3, 6, 7]
+
+Found augmenting path: 0 -> 1 -> 2 -> 5 -> 3 -> 6 -> 7 with flow = 1
+Updated Residual Graph:
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           2           0           0           0           0           0
+           b           0           5           0           0           0           2           0           0
+           c           9           0           4           0           0           2           0           0
+           d           0           0           4           0           0           6           0           2
+           e           0           0           1           4           0           0           0           0
+           f           0           0           0           5           0           0           0           2
+           t           0           0           0           0           4           5           5           0
+
+Iteration 5 - BFS Details:
+Queue starts with: [0]
+Visiting: 0
+BFS did not find a path to sink.
+
+No augmenting path found. Terminating Ford-Fulkerson.
+
+Maximum Flow (Ford-Fulkerson): 14
+
+
+Final Flow/Capacity Matrix (FF)
+                       s           a           b           c           d           e           f           t
+ ------------------------------------------------------------------------------------------------------------
+           s                     5/5                     9/9                                                
+           a                                 5/7                                                            
+           b                                                         4/4         1/3                        
+           c                                 0/4                                 4/6         5/5            
+           d                                                                     0/6                     4/6
+           e                                                                                             5/5
+           f                                                                                             5/7
+           t                                                                                                

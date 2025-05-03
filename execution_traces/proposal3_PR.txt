@@ -1,0 +1,255 @@
+Execution Trace for Proposal 3 (Push-Relabel)
+
+
+--- Push-Relabel (refined) ---
+Initial Heights: [8, 0, 0, 0, 0, 0, 0, 0]
+Initial Excess: [-17.0, 5.0, 8.0, 4.0, 0, 0, 0, 0]
+Initial Residual Graph:
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           4           0           7           0           0           0
+           b           8           0           0           0           0           7           8           0
+           c           4           0           7           0           0           0           4           0
+           d           0           0           0           0           0           6           0           0
+           e           0           0           0           0           0           0           0           7
+           f           0           0           0           0           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 0: Relabeled vertex 1 from height 0 to 1
+Iteration 1: Pushed 4 from 1 to 2
+Excess: [-17.0, 1.0, 12.0, 4.0, 0, 0, 0, 0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           7           0           0           0
+           b           8           4           0           0           0           7           8           0
+           c           4           0           7           0           0           0           4           0
+           d           0           0           0           0           0           6           0           0
+           e           0           0           0           0           0           0           0           7
+           f           0           0           0           0           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 1: Pushed 1 from 1 to 4
+Excess: [-17.0, 0.0, 12.0, 4.0, 1.0, 0, 0, 0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           7           8           0
+           c           4           0           7           0           0           0           4           0
+           d           0           1           0           0           0           6           0           0
+           e           0           0           0           0           0           0           0           7
+           f           0           0           0           0           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 1: Relabeled vertex 2 from height 0 to 1
+Iteration 2: Pushed 7 from 2 to 5
+Excess: [-17.0, 0.0, 5.0, 4.0, 1.0, 7.0, 0, 0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           0           8           0
+           c           4           0           7           0           0           0           4           0
+           d           0           1           0           0           0           6           0           0
+           e           0           0           7           0           0           0           0           7
+           f           0           0           0           0           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 2: Pushed 5 from 2 to 6
+Excess: [-17.0, 0.0, 0.0, 4.0, 1.0, 7.0, 5.0, 0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           0           3           0
+           c           4           0           7           0           0           0           4           0
+           d           0           1           0           0           0           6           0           0
+           e           0           0           7           0           0           0           0           7
+           f           0           0           5           0           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 2: Relabeled vertex 3 from height 0 to 1
+Iteration 3: Pushed 4 from 3 to 6
+Excess: [-17.0, 0.0, 0.0, 0.0, 1.0, 7.0, 9.0, 0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           0           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           6           0           0
+           e           0           0           7           0           0           0           0           7
+           f           0           0           5           4           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 3: Relabeled vertex 4 from height 0 to 1
+Iteration 4: Pushed 1 from 4 to 5
+Excess: [-17.0, 0.0, 0.0, 0.0, 0.0, 8.0, 9.0, 0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           0           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           7           0           1           0           0           7
+           f           0           0           5           4           0           0           0          10
+           t           0           0           0           0           0           0           0           0
+
+Iteration 4: Relabeled vertex 5 from height 0 to 1
+Iteration 5: Pushed 7 from 5 to 7
+Excess: [-17.0, 0.0, 0.0, 0.0, 0.0, 1.0, 9.0, 7.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           0           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           7           0           1           0           0           0
+           f           0           0           5           4           0           0           0          10
+           t           0           0           0           0           0           7           0           0
+
+Iteration 5: Relabeled vertex 5 from height 1 to 2
+Iteration 6: Pushed 1 from 5 to 2
+Excess: [-17.0, 0.0, 1.0, 0.0, 0.0, 0.0, 9.0, 7.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           1           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           5           4           0           0           0          10
+           t           0           0           0           0           0           7           0           0
+
+Iteration 6: Relabeled vertex 6 from height 0 to 1
+Iteration 7: Pushed 9 from 6 to 7
+Excess: [-17.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 16.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           1           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           5           4           0           0           0           1
+           t           0           0           0           0           0           7           9           0
+
+Iteration 7: Relabeled vertex 2 from height 1 to 2
+Iteration 8: Pushed 1 from 2 to 1
+Excess: [-17.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           1           0           6           0           0           0
+           b           8           3           0           0           0           1           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           5           4           0           0           0           1
+           t           0           0           0           0           0           7           9           0
+
+Iteration 8: Relabeled vertex 1 from height 1 to 2
+Iteration 9: Pushed 1 from 1 to 4
+Excess: [-17.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 16.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           1           0           5           0           0           0
+           b           8           3           0           0           0           1           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           2           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           5           4           0           0           0           1
+           t           0           0           0           0           0           7           9           0
+
+Iteration 9: Relabeled vertex 4 from height 1 to 3
+Iteration 10: Pushed 1 from 4 to 1
+Excess: [-17.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           1           0           6           0           0           0
+           b           8           3           0           0           0           1           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           5           4           0           0           0           1
+           t           0           0           0           0           0           7           9           0
+
+Iteration 10: Relabeled vertex 1 from height 2 to 3
+Iteration 11: Pushed 1 from 1 to 2
+Excess: [-17.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 16.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           1           3           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           5           4           0           0           0           1
+           t           0           0           0           0           0           7           9           0
+
+Iteration 11: Pushed 1 from 2 to 6
+Excess: [-17.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 16.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           1           2           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           6           4           0           0           0           1
+           t           0           0           0           0           0           7           9           0
+
+Iteration 11: Pushed 1 from 6 to 7
+Excess: [-17.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 17.0]
+
+Residual Graph
+                       s           a           b           c           d           e           f           t
+           s           0           0           0           0           0           0           0           0
+           a           5           0           0           0           6           0           0           0
+           b           8           4           0           0           0           1           2           0
+           c           4           0           7           0           0           0           0           0
+           d           0           1           0           0           0           5           0           0
+           e           0           0           6           0           1           0           0           0
+           f           0           0           6           4           0           0           0           0
+           t           0           0           0           0           0           7          10           0
+
+
+Final Flow/Capacity Matrix (Push-Relabel)
+                       s           a           b           c           d           e           f           t
+ ------------------------------------------------------------------------------------------------------------
+           s                     5/5         8/8         4/4                                                
+           a                                 4/4                     1/7                                    
+           b                                                                     6/7         6/8            
+           c                                 0/7                                             4/4            
+           d                                                                     1/6                        
+           e                                                                                             7/7
+           f                                                                                           10/10
+           t                                                                                                
+
+Maximum Flow (Push-Relabel, refined): 17
+Flow accumulated at sink (excess[7]): 17

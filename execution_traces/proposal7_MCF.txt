@@ -1,0 +1,183 @@
+Execution Trace for Proposal 7 (Minimum-Cost Flow)
+
+
+--- Minimum-Cost Flow (Using Bellman-Ford) ---
+
+Bellman-Ford Table for iteration 0:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+    Iter 1 D           0           4           6           2           4           6
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+    Iter 1 P          -1           0           1           0           0           4
+
+Found augmenting path (min cost): 0 -> 4 -> 5 with flow = 1 and path cost = 6
+Updated Residual Capacity Matrix:
+
+Residual Capacity
+                       s           a           b           c           d           t
+           s           0           5           0           8           4           0
+           a           0           0           1           0           0           7
+           b           0           0           0           0           0           1
+           c           0           3           0           0           0           9
+           d           1           0           0           4           0           0
+           t           0           0           0           0           1           0
+
+
+Bellman-Ford Table for iteration 1:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+    Iter 1 D           0           4           6           2           4           7
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+    Iter 1 P          -1           0           1           0           0           1
+
+Found augmenting path (min cost): 0 -> 1 -> 5 with flow = 5 and path cost = 7
+Updated Residual Capacity Matrix:
+
+Residual Capacity
+                       s           a           b           c           d           t
+           s           0           0           0           8           4           0
+           a           5           0           1           0           0           2
+           b           0           0           0           0           0           1
+           c           0           3           0           0           0           9
+           d           1           0           0           4           0           0
+           t           0           5           0           0           1           0
+
+
+Bellman-Ford Table for iteration 2:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+    Iter 1 D           0           5         inf           2           4           8
+    Iter 2 D           0           5           7           2           4           8
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+    Iter 1 P          -1           5          -1           0           0           3
+    Iter 2 P          -1           5           1           0           0           3
+
+Found augmenting path (min cost): 0 -> 3 -> 5 with flow = 8 and path cost = 8
+Updated Residual Capacity Matrix:
+
+Residual Capacity
+                       s           a           b           c           d           t
+           s           0           0           0           0           4           0
+           a           5           0           1           0           0           2
+           b           0           0           0           0           0           1
+           c           8           3           0           0           0           1
+           d           1           0           0           4           0           0
+           t           0           5           0           8           1           0
+
+
+Bellman-Ford Table for iteration 3:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+    Iter 1 D           0         inf         inf           6           4         inf
+    Iter 2 D           0           9         inf           6           4          12
+    Iter 3 D           0           9          11           6           4          12
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+    Iter 1 P          -1          -1          -1           4           0          -1
+    Iter 2 P          -1           5          -1           4           0           3
+    Iter 3 P          -1           5           1           4           0           3
+
+Found augmenting path (min cost): 0 -> 4 -> 3 -> 5 with flow = 1 and path cost = 12
+Updated Residual Capacity Matrix:
+
+Residual Capacity
+                       s           a           b           c           d           t
+           s           0           0           0           0           3           0
+           a           5           0           1           0           0           2
+           b           0           0           0           0           0           1
+           c           8           3           0           0           1           0
+           d           2           0           0           3           0           0
+           t           0           5           0           9           1           0
+
+
+Bellman-Ford Table for iteration 4:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+    Iter 1 D           0         inf         inf           6           4         inf
+    Iter 2 D           0          10         inf           6           4         inf
+    Iter 3 D           0          10          12           6           4          13
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+    Iter 1 P          -1          -1          -1           4           0          -1
+    Iter 2 P          -1           3          -1           4           0          -1
+    Iter 3 P          -1           3           1           4           0           1
+
+Found augmenting path (min cost): 0 -> 4 -> 3 -> 1 -> 5 with flow = 2 and path cost = 13
+Updated Residual Capacity Matrix:
+
+Residual Capacity
+                       s           a           b           c           d           t
+           s           0           0           0           0           1           0
+           a           5           0           1           2           0           0
+           b           0           0           0           0           0           1
+           c           8           1           0           0           3           0
+           d           4           0           0           1           0           0
+           t           0           7           0           9           1           0
+
+
+Bellman-Ford Table for iteration 5:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+    Iter 1 D           0         inf         inf           6           4         inf
+    Iter 2 D           0          10         inf           6           4         inf
+    Iter 3 D           0          10          12           6           4          15
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+    Iter 1 P          -1          -1          -1           4           0          -1
+    Iter 2 P          -1           3          -1           4           0          -1
+    Iter 3 P          -1           3           1           4           0           2
+
+Found augmenting path (min cost): 0 -> 4 -> 3 -> 1 -> 2 -> 5 with flow = 1 and path cost = 15
+Updated Residual Capacity Matrix:
+
+Residual Capacity
+                       s           a           b           c           d           t
+           s           0           0           0           0           0           0
+           a           5           0           0           3           0           0
+           b           0           1           0           0           0           0
+           c           8           0           0           0           4           0
+           d           5           0           0           0           0           0
+           t           0           7           1           9           1           0
+
+
+Bellman-Ford Table for iteration 6:
+
+Bellman-Ford Distance Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 D           0         inf         inf         inf         inf         inf
+
+Bellman-Ford Parent Table:
+            v          0v          1v          2v          3v          4v          5
+    Iter 0 P          -1          -1          -1          -1          -1          -1
+
+No more augmenting paths found for minimum-cost flow.
+
+Minimum-Cost Flow Results: Flow = 18, Total Cost = 158
+
